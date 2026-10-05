@@ -1,6 +1,6 @@
 # TFTP: a multi-client file server and client in Java
 
-[![test](https://github.com/nirkem/Systems-Programming-Assignment-3/actions/workflows/test.yml/badge.svg)](https://github.com/nirkem/Systems-Programming-Assignment-3/actions/workflows/test.yml)
+[![test](https://github.com/nirkem/TFTP-server/actions/workflows/test.yml/badge.svg)](https://github.com/nirkem/TFTP-server/actions/workflows/test.yml)
 
 A file server and a console client that talk a binary protocol over TCP, an extended version of TFTP. Clients log in with a user name, upload, download, delete and list files, and every logged-in client is told when a file is added or removed. The server gives each client its own thread, and the client uses two: one for the keyboard and one for the socket. Written for the Systems Programming course (SPL) at Ben-Gurion University in 2024.
 
