@@ -146,6 +146,7 @@ class TftpServerTest {
     }
 
     @Test
+    @Timeout(60) // 33,000 lockstep round trips
     void transfersPastBlock32767() throws IOException {
         // Block numbers are unsigned 16-bit, so they must not go negative after 32767.
         byte[] content = randomBytes(MAX_DATA * 33_000 + 7, 1);

@@ -3,6 +3,7 @@ package tftp.server;
 import static org.junit.jupiter.api.Assertions.*;
 import static tftp.common.Packets.*;
 
+import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,7 +29,7 @@ final class RawClient implements AutoCloseable {
     RawClient(int port) throws IOException {
         sock = new Socket("localhost", port);
         sock.setSoTimeout(5000);
-        in = sock.getInputStream();
+        in = new BufferedInputStream(sock.getInputStream());
         out = sock.getOutputStream();
     }
 
